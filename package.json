@@ -1,0 +1,13 @@
+{
+  "name": "test-ci",
+  "version": "0.0.1",
+  "description": "Just some tests to run in CI",
+  "scripts": {
+    "test": "npx mocha test"
+  },
+  "author": "cbankston",
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "^6.2.0"
+  }
+}
