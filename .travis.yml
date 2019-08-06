@@ -1,6 +1,14 @@
 language: node_js
+services:
+  - docker
 node_js:
   - "stable"
+
+before_install:
+  docker build -t vpatel90/test-ci
+  docker ps -a
+  docker run vpatel90/test-ci /bin/sh -c "cd /root/test-ci; npm test"
+
 cache:
   directories:
     - "node_modules"
