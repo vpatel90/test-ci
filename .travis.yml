@@ -5,7 +5,7 @@ node_js:
   - "stable"
 
 before_install:
-  - docker build -t carlad/sinatra
+  - docker build -t carlad/sinatra .
   - docker ps -a
   - docker run carlad/sinatra /bin/sh -c "cd /root/test-ci; npm test"
 
