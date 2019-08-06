@@ -13,5 +13,5 @@ cache:
   directories:
     - "node_modules"
 
-scripts:
+script:
   - npm test
