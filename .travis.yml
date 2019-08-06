@@ -5,9 +5,9 @@ node_js:
   - "stable"
 
 before_install:
-  - docker build -t vpatel90/test-ci
+  - docker build -t carlad/sinatra
   - docker ps -a
-  - docker run vpatel90/test-ci /bin/sh -c "cd /root/test-ci; npm test"
+  - docker run carlad/sinatra /bin/sh -c "cd /root/test-ci; npm test"
 
 cache:
   directories:
