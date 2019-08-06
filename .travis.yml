@@ -5,9 +5,9 @@ node_js:
   - "stable"
 
 before_install:
-  - docker build .
+  - docker build -t service .
   - docker ps -a
-  - docker run npm test
+  - docker run service /bin/sh -c "npm test"
 
 cache:
   directories:
