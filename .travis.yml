@@ -7,10 +7,11 @@ node_js:
 before_install:
   - docker build -t service .
   - docker ps -a
+  - docker run service /bin/sh -c "npm test"
 
 cache:
   directories:
     - "node_modules"
 
 scripts:
-  - docker run service /bin/sh -c "npm test"
+  - npm test
